@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+
+}
+
+nav {
+    padding-top: 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+nav a:hover {
+    color: darkorchid;
+}
+
+main {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+div {
+    max-width: 1080px;
+}
+
+#projects {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+#intro {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#intro h1 {
+    padding: 0 0px 0px 20px;
+    font-size: 46px;
+    margin-bottom: 30px;
+}
+
+#intro div {
+    max-width: 80%;
+    padding: 0 20px 10px 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 28px;
+
+}
+
+#projects .project-image {
+    position: relative; /* Make this container the reference point for absolute positioning */
+    overflow: hidden; /* Ensures the overlay doesn't spill out */
+}
+
+#projects div {
+    padding: 0 20px 10px 20px;
+}
+
+#projects img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-title div button {
+    background-color: darkorchid;
+    border: none;
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Overlay setup */
+.overlay {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.8); /* Gray with transparency */
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+.overlay h1 {
+    color: black;
+    background-color: white;
+    width: fit-content;
+    padding: 10px 20px 10px 20px;
+    width: 300px;
+    text-align: center;
+    z-index: 100;
+}
+/* Show overlay on hover */
+.project-image:hover .overlay {
+    opacity: 1;
+}
+
+/* Additional hover effect */
+.project-image:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: transform 0.1s ease;
+}
