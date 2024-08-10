@@ -56,8 +56,10 @@ main {
 
 #hero div button {
     background-color: darkorchid;
+    display: flex;
+    align-items: center;
     border: none;
-    padding: 20px;
+    padding: 20px 10px 20px 10px;
     color: white;
     font-weight: 500;
     cursor: pointer;
@@ -74,25 +76,24 @@ main {
     width: 50%;
 }
 
-aside {
+#hero div div {
     display: flex;
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    top: 40%;
+
 }
 
-aside i {
+#hero div div div{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+}
+#hero div div i {
     font-size: 36px;
-    margin-bottom: 10px;
     cursor: pointer;
     transition: all 200ms;
-}
-
-aside a {
     color: black;
 }
 
-aside i:hover {
-    font-size: 50px;
+#hero div div i:hover {
+    color: darkorchid;
 }
